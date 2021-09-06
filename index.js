@@ -4,7 +4,7 @@ function autoExpand(elem) {
 }
 function keyPressHandler(elem,e) {
       console.log(window.event.shiftKey)
-      var kC  = (window.event) ?    // MSIE or Firefox?
+      var kC  = (window.event.keyCode) ?    // MSIE or Firefox?
                  event.keyCode : e.keyCode;
       if(kC==13 && !e.shiftKey){elem.form.submit()}
 }
